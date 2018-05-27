@@ -1,10 +1,11 @@
 import express from 'express';
+import path from 'path';
 // import helmet from 'helmet';
 
 let app = express();
 
 app.get( '/', ( req, res ) => {
-    res.json( 'Assalamualaikum' );
+    res.sendFile(path.join(__dirname+'/views/index.html'));
 });
 
 
