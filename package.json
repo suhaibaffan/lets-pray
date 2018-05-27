@@ -1,0 +1,46 @@
+{
+  "name": "lets-pray",
+  "version": "1.0.0",
+  "description": "Real time salah tracking.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node src/app.js",
+    "build": "babel src --out-dir build --source-maps inline"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "babel-register"
+    ]
+  },"babel": {
+    "plugins": [
+      "transform-object-rest-spread"
+    ],
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suhaibaffan/lets-pray.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suhaibaffan/lets-pray/issues"
+  },
+  "homepage": "https://github.com/suhaibaffan/lets-pray#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
